@@ -20,7 +20,7 @@ Build a **mock app** to send ETH (without interacting with any blockchain or wal
 ### Key points
 
 - Transactions must be **stored and fetched** making use of the `TransactionsService` `addTransaction()` and `getListOfTransactions()` methods
-- Past transactions must be *listed* on the **main page**
+- Past transactions must be _listed_ on the **main page**
 - You would need to add an **amount to transfer** input field (note: it's not present in the image, styling should be consistent)
 - Styling and layout do not have to be necessarily like the provided image
 
@@ -41,4 +41,13 @@ Build a **mock app** to send ETH (without interacting with any blockchain or wal
 - Clean and consistent interface would be a bonus.
 
 ## Reference layout
+
 ![alt text](test-task-ui.png)
+
+## Run storybook
+
+To execute an isolated iframe to render components without interference from app business logic and context run the next command.
+
+```
+yarn storybook
+```
