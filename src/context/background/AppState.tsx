@@ -1,16 +1,9 @@
-import React, { useReducer } from 'react';
-import AppContext from './AppContext';
-import AppReducer from './AppReducer';
-import Actions from '../contextActions';
-import { Transaction } from '../../services/TransactionsService';
-
-export interface IAppState {
-  transactions: Array<Transaction>;
-}
-
-export const initAppState: IAppState = {
-  transactions: [],
-};
+import React, { useReducer } from "react";
+import AppContext from "./AppContext";
+import AppReducer from "./AppReducer";
+import Actions from "../contextActions";
+import { Transaction } from "../../services/TransactionsService";
+import { IAppState, initAppState } from "./IAppState";
 
 const AppState = (props: any) => {
   const [state, dispatch] = useReducer(AppReducer, initAppState);
@@ -22,11 +15,9 @@ const AppState = (props: any) => {
       payload: newState,
     });
   };
-  
-  // TODO: Complete the addTransaction method
-  const addTransaction = (transaction: Transaction) => {
 
-  }
+  // TODO: Complete the addTransaction method
+  const addTransaction = (transaction: Transaction) => {};
 
   return (
     <AppContext.Provider
