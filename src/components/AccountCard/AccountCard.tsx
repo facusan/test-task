@@ -1,26 +1,10 @@
-import styled from "styled-components";
 import { HiArrowNarrowUp } from "react-icons/hi";
-const AccountCardWrapper = styled.div`
-  background-color: #eaf3fc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  border-radius: 10px;
-`;
-
-const AccountValueWrapper = styled.div`
-  margin: 10px;
-  font-size: xx-large;
-  font-weight: bold;
-  font-family: sans-serif;
-`;
-
-const AccountFiatValueWrapper = styled.div`
-  font-size: large;
-  color: lightslategrey;
-  font-family: sans-serif;
-`;
+import CircularTextButton from "../CircularTextButton/CircularTextButton";
+import {
+  AccountCardWrapper,
+  AccountFiatValueWrapper,
+  AccountValueWrapper,
+} from "./AccountCard.styles";
 
 interface AccountCardProps {
   price: number;
@@ -28,6 +12,7 @@ interface AccountCardProps {
 }
 export default function AccountCard({ price, accountValue }: AccountCardProps) {
   const GetFiatValue = () => price * accountValue;
+  const onClickButton = () => console.log("click");
   return (
     <AccountCardWrapper>
       <AccountValueWrapper>{accountValue} ETH</AccountValueWrapper>
@@ -35,7 +20,11 @@ export default function AccountCard({ price, accountValue }: AccountCardProps) {
         ${GetFiatValue().toFixed(2)} USD
       </AccountFiatValueWrapper>
       <div>
-        <HiArrowNarrowUp /> Send
+        <CircularTextButton
+          onClick={onClickButton}
+          icon={<HiArrowNarrowUp />}
+          text="Send"
+        ></CircularTextButton>
       </div>
     </AccountCardWrapper>
   );
