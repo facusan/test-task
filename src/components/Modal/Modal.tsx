@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Button/Button";
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -37,8 +38,12 @@ export default function Modal({ next, cancel, children }: ModalProps) {
       <HeaderWrapper>{"Send Ether"}</HeaderWrapper>
       <BodyWrapper>{children}</BodyWrapper>
       <FooterWrapper>
-        <input type={"button"} value={"Cancel"}></input>
-        <input type={"button"} value={"Next"}></input>
+        <Button color={"secondary"} size={"small"}>
+          Cancel
+        </Button>
+        <Button color={"primary"} size={"small"}>
+          Next
+        </Button>
       </FooterWrapper>
     </ModalWrapper>
   );
