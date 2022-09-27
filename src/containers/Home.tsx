@@ -13,34 +13,44 @@ const transactions: Transaction[] = [
     date: new Date(),
   },
   {
-    id: 2,
+    id: 1,
     to: "#123",
-    from: "#556",
-    value: 1400,
+    from: "#456",
+    value: 1100,
     date: new Date(),
   },
   {
-    id: 3,
+    id: 1,
     to: "#123",
-    from: "#556",
-    value: 1400,
+    from: "#456",
+    value: 1100,
     date: new Date(),
   },
 ];
 
 const HomeWrapper = styled.div`
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+const HomeBody = styled.div`
   padding: 20px;
 `;
 export default function Home() {
   return (
     <HomeWrapper>
-      <AccountHeader
-        accountAddress="#1234567890"
-        accountImg="avatar.png"
-        accountName="Account1"
-      ></AccountHeader>
-      <AccountCard accountValue={123} price={1200}></AccountCard>
-      <TransactionList transactions={transactions}></TransactionList>
+      <HomeBody>
+        <AccountHeader
+          accountAddress="#1234567890"
+          accountImg="avatar.png"
+          accountName="Account1"
+        ></AccountHeader>
+        <AccountCard accountValue={123} price={1200}></AccountCard>
+        <TransactionList transactions={transactions}></TransactionList>
+      </HomeBody>
     </HomeWrapper>
   );
 }
