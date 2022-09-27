@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TransaciontionListItem correctly 1`] = `
+<div
+  className="sc-bczRLJ cbxpUU"
+>
+  <div
+    className="sc-gsnTZi ctulah"
+  >
+    <img
+      alt="ether"
+      src="ether.png"
+      style={
+        Object {
+          "height": "30px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-dkzDqf kEkHqq"
+  >
+    <div
+      className="sc-hKMtZM fJHpc"
+    >
+      <div>
+        Sent Ether
+      </div>
+      <div>
+        -100 ETH
+      </div>
+    </div>
+    <div
+      className="sc-eCYdqJ edlkWG"
+    >
+      <div>
+        27-9-2022 15:6
+      </div>
+      <div>
+        -$100 USD
+      </div>
+    </div>
+  </div>
+</div>
+`;
