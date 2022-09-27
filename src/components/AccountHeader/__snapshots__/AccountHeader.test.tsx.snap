@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AccountHeader correctly 1`] = `
+<div
+  className="sc-bczRLJ yJABb"
+>
+  <div
+    className="sc-gsnTZi lEtQN"
+  >
+    <img
+      alt="account avatar"
+      src="avatar.png"
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-dkzDqf GaipU"
+  >
+    <div
+      className="sc-hKMtZM fdRjPi"
+    >
+      Account 1
+    </div>
+    <div
+      className="sc-eCYdqJ fpmrSv"
+    >
+      0x3B3...d1ab
+    </div>
+  </div>
+</div>
+`;
