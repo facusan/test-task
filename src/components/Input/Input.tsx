@@ -16,6 +16,7 @@ const StyledInput = styled.input`
 `;
 
 const InputWrapper = styled.div`
+  margin: 0px 0px 20px 0px;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: black;

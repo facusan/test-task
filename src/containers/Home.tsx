@@ -5,7 +5,7 @@ import AccountHeader from "../components/AccountHeader/AccountHeader";
 import TransactionList from "../components/TransactionList/TransactionList";
 import AppContext from "../context/background/AppContext";
 import { Transaction } from "../services/TransactionsService";
-import SendRecipientModal from "./SendRecipientModal";
+import SendModal from "./SendModal";
 
 const transactions: Transaction[] = [
   {
@@ -47,7 +47,7 @@ export default function Home() {
   const sendEth = () => {
     context.setState({
       ...context.state,
-      currentPage: <SendRecipientModal></SendRecipientModal>,
+      currentPage: <SendModal></SendModal>,
     });
   };
   return (
