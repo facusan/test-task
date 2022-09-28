@@ -1,35 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import AccountCard from "../components/AccountCard/AccountCard";
 import AccountHeader from "../components/AccountHeader/AccountHeader";
 import TransactionList from "../components/TransactionList/TransactionList";
 import AppContext from "../context/background/AppContext";
-import { Transaction } from "../services/TransactionsService";
 import SendModal from "./SendModal";
-
-const transactions: Transaction[] = [
-  {
-    id: 1,
-    to: "#123",
-    from: "#456",
-    value: 1100,
-    date: new Date(),
-  },
-  {
-    id: 1,
-    to: "#123",
-    from: "#456",
-    value: 1100,
-    date: new Date(),
-  },
-  {
-    id: 1,
-    to: "#123",
-    from: "#456",
-    value: 1100,
-    date: new Date(),
-  },
-];
 
 const HomeWrapper = styled.div`
   width: 100%;
@@ -47,11 +22,18 @@ export default function Home() {
   const sendEth = () => {
     context.setCurrentPage(<SendModal></SendModal>);
   };
+
+  useEffect(() => {
+    context.transactionService.getListOfTransactions().then((result) => {
+      context.addTransaction(result);
+    });
+  }, []);
+
   return (
     <HomeWrapper>
       <HomeBody>
         <AccountHeader
-          accountAddress="#1234567890"
+          accountAddress={context.state.publicAddress}
           accountImg="avatar.png"
           accountName="Account1"
         ></AccountHeader>
@@ -60,7 +42,9 @@ export default function Home() {
           price={1200}
           sendEth={sendEth}
         ></AccountCard>
-        <TransactionList transactions={transactions}></TransactionList>
+        <TransactionList
+          transactions={context.state.transactions}
+        ></TransactionList>
       </HomeBody>
     </HomeWrapper>
   );

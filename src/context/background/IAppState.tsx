@@ -1,5 +1,6 @@
 import Home from "../../containers/Home";
 import { Transaction } from "../../services/TransactionsService";
+import defaults from "../../utils/constants";
 
 export interface IAppState {
   currentPage: JSX.Element;

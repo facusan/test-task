@@ -2,8 +2,12 @@ import React, { useReducer } from "react";
 import AppContext from "./AppContext";
 import AppReducer from "./AppReducer";
 import Actions from "../contextActions";
-import { Transaction } from "../../services/TransactionsService";
+import {
+  Transaction,
+  TransactionsService,
+} from "../../services/TransactionsService";
 import { IAppState, initAppState } from "./IAppState";
+import defaults from "../../utils/constants";
 
 const AppState = (props: any) => {
   const [state, dispatch] = useReducer(AppReducer, initAppState);
@@ -23,13 +27,15 @@ const AppState = (props: any) => {
     });
   };
 
-  const addTransaction = (transaction: Transaction) => {
+  const addTransaction = (transaction: Transaction[]) => {
     dispatch({
       type: Actions.SET_TRANSACTIONS,
-      payload: [transaction],
+      payload: transaction,
     });
   };
-
+  const transactionService = new TransactionsService({
+    transactions: defaults.pastTransactions,
+  });
   return (
     <AppContext.Provider
       value={{
@@ -37,6 +43,7 @@ const AppState = (props: any) => {
         setState,
         addTransaction,
         setCurrentPage,
+        transactionService,
       }}
     >
       {props.children}
