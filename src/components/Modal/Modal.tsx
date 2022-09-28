@@ -43,21 +43,28 @@ const CloseIconWrapper = styled.div`
 interface ModalProps {
   next: Function;
   cancel: Function;
+  close: Function;
   children?: React.ReactNode;
 }
 
-export default function Modal({ next, cancel, children }: ModalProps) {
+export default function Modal({ next, cancel, close, children }: ModalProps) {
+  const onCancelClick = () => {
+    cancel();
+  };
+  const onCloseClick = () => {
+    close();
+  };
   return (
     <ModalWrapper>
       <HeaderWrapper>
         <label>{"Send Ether"}</label>
-        <CloseIconWrapper>
+        <CloseIconWrapper onClick={onCloseClick}>
           <GrFormClose size={"25px"} />
         </CloseIconWrapper>
       </HeaderWrapper>
       <BodyWrapper>{children}</BodyWrapper>
       <FooterWrapper>
-        <Button color={"secondary"} size={"small"}>
+        <Button color={"secondary"} size={"small"} onClick={onCancelClick}>
           Cancel
         </Button>
         <Button color={"primary"} size={"small"}>
