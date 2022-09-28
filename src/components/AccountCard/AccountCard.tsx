@@ -9,10 +9,18 @@ import {
 interface AccountCardProps {
   price: number;
   accountValue: number;
+  sendEth: Function;
 }
-export default function AccountCard({ price, accountValue }: AccountCardProps) {
+export default function AccountCard({
+  price,
+  accountValue,
+  sendEth,
+}: AccountCardProps) {
   const GetFiatValue = () => price * accountValue;
-  const onClickButton = () => console.log("click");
+  const onClickButton = () => {
+    sendEth();
+    console.log("send eth");
+  };
   return (
     <AccountCardWrapper>
       <AccountValueWrapper>{accountValue} ETH</AccountValueWrapper>

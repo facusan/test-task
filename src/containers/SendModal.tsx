@@ -8,6 +8,7 @@ const SendModalWrapper = styled.div`
   border-radius: 10px;
   height: 100%;
 `;
+
 export default function SendModal() {
   return (
     <SendModalWrapper>

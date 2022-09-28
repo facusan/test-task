@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import AccountCard from "../components/AccountCard/AccountCard";
 import AccountHeader from "../components/AccountHeader/AccountHeader";
 import TransactionList from "../components/TransactionList/TransactionList";
+import AppContext from "../context/background/AppContext";
 import { Transaction } from "../services/TransactionsService";
+import SendModal from "./SendModal";
 
 const transactions: Transaction[] = [
   {
@@ -40,6 +43,13 @@ const HomeBody = styled.div`
   padding: 20px;
 `;
 export default function Home() {
+  const context = useContext(AppContext);
+  const sendEth = () => {
+    context.setState({
+      ...context.state,
+      currentPage: <SendModal></SendModal>,
+    });
+  };
   return (
     <HomeWrapper>
       <HomeBody>
@@ -48,7 +58,11 @@ export default function Home() {
           accountImg="avatar.png"
           accountName="Account1"
         ></AccountHeader>
-        <AccountCard accountValue={123} price={1200}></AccountCard>
+        <AccountCard
+          accountValue={123}
+          price={1200}
+          sendEth={sendEth}
+        ></AccountCard>
         <TransactionList transactions={transactions}></TransactionList>
       </HomeBody>
     </HomeWrapper>

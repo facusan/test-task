@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import Home from "./containers/Home";
-import SendModal from "./containers/SendModal";
+import MainScreen from "./containers/MainScreen";
 import AppState from "./context/background/AppState";
 
 const AppWrapper = styled.div`
@@ -10,21 +8,12 @@ const AppWrapper = styled.div`
   width: 100%;
   min-height: 800px;
 `;
-const ScreenWrapper = styled.div`
-  display: flex;
-  width: 500px;
-  margin: 10px;
-`;
+
 const App = () => {
   return (
     <AppState>
       <AppWrapper>
-        <ScreenWrapper>
-          <Home />
-        </ScreenWrapper>
-        <ScreenWrapper>
-          <SendModal />
-        </ScreenWrapper>
+        <MainScreen></MainScreen>
       </AppWrapper>
     </AppState>
   );
