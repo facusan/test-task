@@ -32,14 +32,24 @@ export default function SendModal() {
 
   const goToSendResult = () => {
     let transaction: Transaction = {
-      id: 1,
+      id: 5,
       date: new Date(),
       from: "",
       to: recipient,
       value: Number(amount),
     };
-    context.addTransaction([transaction]);
-    context.setCurrentPage(<SendResultModal success={true}></SendResultModal>);
+    context.transactionService
+      .addTransaction(transaction)
+      .then(() => {
+        context.setCurrentPage(
+          <SendResultModal success={true}></SendResultModal>
+        );
+      })
+      .catch(() => {
+        context.setCurrentPage(
+          <SendResultModal success={false}></SendResultModal>
+        );
+      });
   };
 
   return (

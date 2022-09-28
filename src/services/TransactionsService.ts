@@ -36,6 +36,7 @@ export class TransactionsService extends BaseService<TransactionsServiceState> {
   public async addTransaction(newTransaction: Transaction): Promise<void> {
     return new Promise<void>((resolve) => {
       setTimeout(() => {
+        this.getState().transactions.push(newTransaction);
         resolve();
       }, 300);
     });
