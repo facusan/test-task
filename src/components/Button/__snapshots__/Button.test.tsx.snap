@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders large Button correctly 1`] = `
+<button
+  className="sc-bczRLJ jclefq"
+  color="secondary"
+  onClick={[Function]}
+  size="large"
+>
+  Small
+</button>
+`;
+
+exports[`renders primary Button correctly 1`] = `
+<button
+  className="sc-bczRLJ lniJCu"
+  color="primary"
+  onClick={[Function]}
+>
+  Primary
+</button>
+`;
+
+exports[`renders secondary Button correctly 1`] = `
+<button
+  className="sc-bczRLJ jclefq"
+  color="secondary"
+  onClick={[Function]}
+>
+  Secondary
+</button>
+`;
+
+exports[`renders small Button correctly 1`] = `
+<button
+  className="sc-bczRLJ lhoYHb"
+  color="secondary"
+  onClick={[Function]}
+  size="small"
+>
+  Small
+</button>
+`;

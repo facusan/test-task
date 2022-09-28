@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Modal correctly 1`] = `
+<div
+  className="sc-gsnTZi IKqRv"
+>
+  <div
+    className="sc-dkzDqf iaJygW"
+  >
+    <label>
+      Send Ether
+    </label>
+    <div
+      className="sc-jSMfEi hkeAGj"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="25px"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="25px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7,7 L17,17 M7,17 L17,7"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-hKMtZM bmNRYT"
+  >
+    <label>
+      Modal body
+    </label>
+  </div>
+  <div
+    className="sc-eCYdqJ fZaxcr"
+  >
+    <button
+      className="sc-bczRLJ lhoYHb"
+      color="secondary"
+      onClick={[Function]}
+      size="small"
+    >
+      Cancel
+    </button>
+    <button
+      className="sc-bczRLJ fvOGQT"
+      color="primary"
+      onClick={[Function]}
+      size="small"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders SimpleModal correctly 1`] = `
+<div
+  className="sc-gsnTZi IKqRv"
+>
+  <div
+    className="sc-hKMtZM bmNRYT"
+  >
+    <label>
+      Simple Modal body
+    </label>
+  </div>
+  <div
+    className="sc-eCYdqJ fZaxcr"
+  >
+    <button
+      className="sc-bczRLJ jclefq"
+      color="secondary"
+      onClick={[Function]}
+    >
+      click
+    </button>
+  </div>
+</div>
+`;

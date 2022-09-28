@@ -1,26 +1,5 @@
-import styled from "styled-components";
+import { InputWrapper, StyledInput } from "./Input.styles";
 
-const StyledInput = styled.input`
-  font-family: sans-serif;
-  width: 100%;
-  border: none;
-  margin-top: 10px;
-  padding: 20px 0px;
-  ::placeholder {
-    color: lightslategrey;
-    font-size: large;
-  }
-  &:focus {
-    outline: none;
-  }
-`;
-
-const InputWrapper = styled.div`
-  margin: 0px 0px 20px 0px;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: black;
-`;
 interface InputProps {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   value: string;

@@ -3,7 +3,7 @@
 exports[`renders TransaciontionList correctly 1`] = `
 Array [
   <div
-    className="sc-jSMfEi iDMqNW"
+    className="sc-gicCDI jLHDn"
   >
     <div
       className="sc-bczRLJ cbxpUU"
@@ -38,17 +38,17 @@ Array [
           className="sc-eCYdqJ edlkWG"
         >
           <div>
-            27-9-2022 15:6
+            28-9-2022 17:1
           </div>
           <div>
-            -$100 USD
+            -$170000 USD
           </div>
         </div>
       </div>
     </div>
   </div>,
   <div
-    className="sc-jSMfEi iDMqNW"
+    className="sc-gicCDI jLHDn"
   >
     <div
       className="sc-bczRLJ cbxpUU"
@@ -83,10 +83,10 @@ Array [
           className="sc-eCYdqJ edlkWG"
         >
           <div>
-            27-9-2022 15:6
+            28-9-2022 17:1
           </div>
           <div>
-            -$100 USD
+            -$170000 USD
           </div>
         </div>
       </div>
@@ -126,10 +126,10 @@ Array [
           className="sc-eCYdqJ edlkWG"
         >
           <div>
-            27-9-2022 15:6
+            28-9-2022 17:1
           </div>
           <div>
-            -$100 USD
+            -$170000 USD
           </div>
         </div>
       </div>
