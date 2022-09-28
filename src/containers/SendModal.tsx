@@ -16,10 +16,7 @@ const SendModalWrapper = styled.div`
 export default function SendModal() {
   const context = useContext(AppContext);
   const returnHome = () => {
-    context.setState({
-      ...context.state,
-      currentPage: <Home></Home>,
-    });
+    context.setCurrentPage(<Home></Home>);
   };
   const [recipient, setRecipient] = useState("");
   const onChangeRecipient = (e: ChangeEvent<HTMLInputElement>) =>
@@ -30,10 +27,7 @@ export default function SendModal() {
     setAmount(e.target.value);
 
   const goToSendResult = () => {
-    context.setState({
-      ...context.state,
-      currentPage: <SendResultModal success={true}></SendResultModal>,
-    });
+    context.setCurrentPage(<SendResultModal success={true}></SendResultModal>);
   };
 
   return (

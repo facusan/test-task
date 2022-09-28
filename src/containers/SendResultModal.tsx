@@ -55,10 +55,7 @@ interface SendResultModalProps {
 export default function SendResultModal({ success }: SendResultModalProps) {
   const context = useContext(AppContext);
   const returnHome = () => {
-    context.setState({
-      ...context.state,
-      currentPage: <Home></Home>,
-    });
+    context.setCurrentPage(<Home></Home>);
   };
 
   return (

@@ -1,10 +1,11 @@
 import Actions, {
+  SetCurrentPageAction,
   SetStateAction,
   SetTransactionAction,
 } from "../contextActions";
 import { IAppState } from "./IAppState";
 
-type AppAction = SetTransactionAction | SetStateAction;
+type AppAction = SetTransactionAction | SetStateAction | SetCurrentPageAction;
 
 const appReducer = (state: IAppState, action: AppAction): IAppState => {
   switch (action.type) {
@@ -17,6 +18,11 @@ const appReducer = (state: IAppState, action: AppAction): IAppState => {
       return {
         ...state,
         transactions: action.payload,
+      };
+    case Actions.SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
       };
     default:
       return state;

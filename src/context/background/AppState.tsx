@@ -16,8 +16,19 @@ const AppState = (props: any) => {
     });
   };
 
-  // TODO: Complete the addTransaction method
-  const addTransaction = (transaction: Transaction) => {};
+  const setCurrentPage = (page: JSX.Element) => {
+    dispatch({
+      type: Actions.SET_CURRENT_PAGE,
+      payload: page,
+    });
+  };
+
+  const addTransaction = (transaction: Transaction) => {
+    dispatch({
+      type: Actions.SET_TRANSACTIONS,
+      payload: [transaction],
+    });
+  };
 
   return (
     <AppContext.Provider
@@ -25,6 +36,7 @@ const AppState = (props: any) => {
         state,
         setState,
         addTransaction,
+        setCurrentPage,
       }}
     >
       {props.children}

@@ -6,12 +6,14 @@ type ContextType = {
   state: IAppState;
   addTransaction: (transaction: Transaction) => void;
   setState: (state: IAppState) => void;
+  setCurrentPage: (page: JSX.Element) => void;
 };
 
 const AppContext: React.Context<ContextType> = createContext<ContextType>({
   state: initAppState,
   addTransaction: () => {},
   setState: () => {},
+  setCurrentPage: () => {},
 });
 
 export default AppContext;

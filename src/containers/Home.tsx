@@ -45,10 +45,7 @@ const HomeBody = styled.div`
 export default function Home() {
   const context = useContext(AppContext);
   const sendEth = () => {
-    context.setState({
-      ...context.state,
-      currentPage: <SendModal></SendModal>,
-    });
+    context.setCurrentPage(<SendModal></SendModal>);
   };
   return (
     <HomeWrapper>
