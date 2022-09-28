@@ -29,9 +29,9 @@ export default function SendModal() {
 
   const goToSendResult = () => {
     let transaction: Transaction = {
-      id: 5,
+      id: Math.floor(Math.random() * 100),
       date: new Date(),
-      from: "",
+      from: context.state.publicAddress,
       to: recipient,
       value: Number(amount),
     };
@@ -57,12 +57,14 @@ export default function SendModal() {
           label="Add Recipient"
           onChange={onChangeRecipient}
           placeholder="Enter Public Address"
+          type="text"
         ></Input>
         <Input
           value={amount}
           label="Add Amount"
           onChange={onChangeAmount}
           placeholder="Enter amount"
+          type="number"
         ></Input>
       </Modal>
     </SendModalWrapper>

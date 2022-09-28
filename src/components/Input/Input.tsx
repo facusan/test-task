@@ -5,12 +5,14 @@ interface InputProps {
   value: string;
   label: string;
   placeholder: string;
+  type: string;
 }
 export default function Input({
   value,
   label,
   onChange,
   placeholder,
+  type,
 }: InputProps) {
   return (
     <InputWrapper>
@@ -26,7 +28,7 @@ export default function Input({
       <StyledInput
         value={value}
         onChange={onChange}
-        type={"text"}
+        type={type}
         placeholder={placeholder}
       />
     </InputWrapper>

@@ -44,6 +44,14 @@ Build a **mock app** to send ETH (without interacting with any blockchain or wal
 
 ![alt text](test-task-ui.png)
 
+## Run Wallet
+
+To execute wallet run the next command
+
+```
+yarn storybook
+```
+
 ## Run storybook
 
 To execute an isolated iframe to render components without interference from app business logic and context run the next command.

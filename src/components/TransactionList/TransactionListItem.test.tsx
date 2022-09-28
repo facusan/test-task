@@ -4,7 +4,7 @@ import TransaciontionListItem from "./TransaciontionListItem";
 
 it("renders TransaciontionListItem correctly", () => {
   let transaction: Transaction = {
-    date: new Date(),
+    date: new Date(0),
     from: "#123",
     id: 1,
     to: "#456",

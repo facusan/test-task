@@ -5,21 +5,21 @@ import TransaciontionList from "./TransactionList";
 it("renders TransaciontionList correctly", () => {
   let transactions: Transaction[] = [
     {
-      date: new Date(),
+      date: new Date(0),
       from: "#123",
       id: 1,
       to: "#456",
       value: 100,
     },
     {
-      date: new Date(),
+      date: new Date(0),
       from: "#123",
       id: 2,
       to: "#456",
       value: 100,
     },
     {
-      date: new Date(),
+      date: new Date(0),
       from: "#123",
       id: 3,
       to: "#456",
