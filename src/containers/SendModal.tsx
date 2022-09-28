@@ -6,10 +6,7 @@ import Home from "./Home";
 import AppContext from "../context/background/AppContext";
 import { useState, ChangeEvent } from "react";
 import SendResultModal from "./SendResultModal";
-import {
-  Transaction,
-  TransactionsService,
-} from "../services/TransactionsService";
+import { Transaction } from "../services/TransactionsService";
 const SendModalWrapper = styled.div`
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

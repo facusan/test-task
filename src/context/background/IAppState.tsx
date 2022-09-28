@@ -8,12 +8,16 @@ export interface IAppState {
   publicAddress: string;
   accountBalance: number;
   ethPrice: number;
+  accountName: string;
+  accountAvatar: string;
 }
 
 export const initAppState: IAppState = {
   currentPage: <Home />,
   transactions: [],
-  publicAddress: "0xb701FdCc9Db05d5AD0d7B6aAbb42DBf09ec28Ad0",
-  accountBalance: 3.405,
-  ethPrice: 1700,
+  publicAddress: defaults.publicAddress,
+  accountBalance: defaults.accountBalance,
+  ethPrice: defaults.ethPrice,
+  accountName: defaults.accountName,
+  accountAvatar: defaults.accountAvatar,
 };

@@ -34,12 +34,12 @@ export default function Home() {
       <HomeBody>
         <AccountHeader
           accountAddress={context.state.publicAddress}
-          accountImg="avatar.png"
-          accountName="Account1"
+          accountImg={context.state.accountAvatar}
+          accountName={context.state.accountName}
         ></AccountHeader>
         <AccountCard
-          accountValue={123}
-          price={1200}
+          accountValue={context.state.accountBalance}
+          price={context.state.ethPrice}
           sendEth={sendEth}
         ></AccountCard>
         <TransactionList
